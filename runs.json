@@ -122,5 +122,12 @@
     "date": "2026-10-18",
     "seed": "7429120198198009883",
     "video": "https://youtu.be/zOnaBQvXuPA"
+  },
+  "24": {
+    "date": "2026-10-20",
+    "seed": "-9106675035045007548",
+    "intentionalDeaths": [
+      2
+    ]
   }
 }
