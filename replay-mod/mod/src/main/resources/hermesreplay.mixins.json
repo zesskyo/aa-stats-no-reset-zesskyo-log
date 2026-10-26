@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.zesskyo.hermesreplay.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": ["EntityAccessor"],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

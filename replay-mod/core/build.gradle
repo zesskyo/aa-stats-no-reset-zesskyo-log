@@ -1,0 +1,37 @@
+// Reads Hermes ghost files and play logs. Has no Minecraft dependency, so it builds and
+// tests on its own; the Fabric mod in ../mod pulls it in as an included build.
+plugins {
+    id 'java-library'
+}
+
+group = 'dev.zesskyo'
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Minecraft 1.16.1 ships Gson 2.8.0, so the mod gets it from the game.
+    compileOnly 'com.google.code.gson:gson:2.8.0'
+    testImplementation 'com.google.code.gson:gson:2.8.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    // 1.16.1 runs on Java 8, so stay compatible with it.
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 8
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-Xlint:-options'
+}
+
+test {
+    useJUnitPlatform()
+    // Real runs from this repository, used by RealRunTest when present.
+    systemProperty 'hermesreplay.logs', file('../../logs').absolutePath
+}

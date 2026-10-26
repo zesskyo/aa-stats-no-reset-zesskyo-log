@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "hermesreplay",
+  "version": "${version}",
+  "name": "Hermes Replay",
+  "description": "Watch a speedrun back from its Hermes ghost and play log, in a world regenerated from the run's seed.",
+  "authors": ["Zesskyo"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.zesskyo.hermesreplay.HermesReplayClient"]
+  },
+  "mixins": ["hermesreplay.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "1.16.1"
+  }
+}

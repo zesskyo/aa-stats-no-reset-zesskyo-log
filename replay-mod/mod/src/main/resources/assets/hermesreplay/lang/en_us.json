@@ -1,0 +1,9 @@
+{
+  "category.hermesreplay": "Hermes Replay",
+  "key.hermesreplay.pause": "Play / pause",
+  "key.hermesreplay.slower": "Slower",
+  "key.hermesreplay.faster": "Faster",
+  "key.hermesreplay.back": "Back 10 seconds",
+  "key.hermesreplay.forward": "Forward 10 seconds",
+  "key.hermesreplay.follow": "Follow the runner (first person)"
+}
